@@ -83,6 +83,24 @@ namespace GitProject
             repo.RxMainFrame.RxButtonExit.Click("28;11");
             Delay.Milliseconds(200);
             
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Down item 'RxMainFrame.Reset' at 15;11.", repo.RxMainFrame.ResetInfo, new RecordItemIndex(1));
+            repo.RxMainFrame.Reset.MoveTo("15;11");
+            Mouse.ButtonDown(System.Windows.Forms.MouseButtons.Left);
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Move item 'RxMainFrame.Reset' at 23;3.", repo.RxMainFrame.ResetInfo, new RecordItemIndex(2));
+            repo.RxMainFrame.Reset.MoveTo("23;3");
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Up item 'RxMainFrame1.Reset' at 596;176.", repo.RxMainFrame1.ResetInfo, new RecordItemIndex(3));
+            repo.RxMainFrame1.Reset.MoveTo("596;176");
+            Mouse.ButtonUp(System.Windows.Forms.MouseButtons.Left);
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='E&xit') on item 'RxMainFrame.RxButtonExit'.", repo.RxMainFrame.RxButtonExitInfo, new RecordItemIndex(4));
+            Validate.AttributeEqual(repo.RxMainFrame.RxButtonExitInfo, "Text", "E&xit");
+            Delay.Milliseconds(100);
+            
         }
 
 #region Image Feature Data

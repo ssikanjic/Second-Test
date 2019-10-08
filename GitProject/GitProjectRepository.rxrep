@@ -31,6 +31,16 @@ name="GitProjectRepository">
 			searchtimeout="30000ms">
 				/form[@controlname='RxMainFrame']/button[@controlname='RxButtonExit']
 			</item>
+			<item
+			addcaps="link,accessible"
+			capname="link"
+			id="331dcd92-06d4-4958-8251-49fb106513b4"
+			name="Reset"
+			refimgid="7074dbcd-5efd-411e-ae54-ee053295f872"
+			refpath="/form[@controlname='RxMainFrame']/tabpagelist/tabpage[@controlname='RxTabIntroduction']/link/text/link[@accessiblename='Reset']"
+			searchtimeout="30000ms">
+				/form[@controlname='RxMainFrame']/?/?/tabpage[@controlname='RxTabIntroduction']/link[@controlname='RxLinkBtnReset']/?/?/link[@accessiblename='Reset']
+			</item>
 			<basepath>
 				/form[@controlname='RxMainFrame']
 			</basepath>
@@ -40,6 +50,44 @@ jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAB9SURBVDhPY0AGwcHBi4D4NxD/x4NB8r+DgoJa
 odogACj4BqQAyiUdwDQ/YBfa+oBN6CA+DNaADmAGAAlGIGbCh8Ea0AHIACD+B8RficFQbQgAFAQa
 TjwABuI3KBMCSDEgICBAeNSAUQOwGgACIEOAEt8JYaC6H0AaaAADAwC5s5VutWbaWgAAAABJRU5E
 rkJggg==
+			</icon>
+		</appfolder>
+		<appfolder
+		addcaps="form,control,nativewindow"
+		capname="form"
+		id="6fe3dbc0-54e4-448a-8b3e-1ab8ac554c4c"
+		isrooted="True"
+		name="RxMainFrame1"
+		refpath="/form[@controltypename='RxMainFrame']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="link,accessible"
+			capname="link"
+			id="8c7fb77e-a57f-43e2-9d7f-9676aaa72ba0"
+			name="Reset"
+			refimgid="423adf3f-bdf8-4a23-b820-59517a7d31cd"
+			refpath="/form[@controltypename='RxMainFrame']/tabpagelist/tabpage[@controlname='RxTabIntroduction']/link/text/link[@accessiblename='Reset']"
+			searchtimeout="30000ms">
+				/form[@controltypename='RxMainFrame']/?/?/tabpage[1]/link[@controlname='RxLinkBtnReset']/?/?/link[@accessiblename='Reset']
+			</item>
+			<basepath>
+				/form[@controltypename='RxMainFrame']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
+AAAOxAAADsQBlSsOGwAAAlFJREFUOE+lk+tLk2EYh/eX9CGipCIyCKLo4HHlzA8SVoR9KogkkKDM
+CKRCCwQtKUjtIJSdrKggqQ+CFZmHHGlzzrU552HqNnWbO7zHXT3bBLXQoG74fXvv63c9z8tj+O9p
+aDFz55WDmuYBqpp+cLnRzJnqTk5UdlNc8YWic60Ulr6koOTJshw8/RjjkXIMdc9tNLVrNLZp3GqV
+qX4dofJZkIpHs5Q3+Tl710fJ7UlO1o5zvNrN0SoXh644yS8zsyZtB4baZjN1bwLcfBvm4oMpTt1w
+U3zdybFrDg5ftVNYYaPg0iCmcisHLgxgLLOQe95CRmk369KNGGoaXuAPxAhHNeZFQhGVYFghIDIb
+SsUbUPDMyLi9Mg6PhHVMosvqYePW7QJQ38JqE4+DokJEijMX0ZkKaoz6VSwuLxs2b8Nw/+n7hU//
+HE0HSYkzH9OZmdeYnNNw+xR+Tir0DP0FoItmWSwnm8M606J5TDQ7pxSs4zKd1tUACW1NLMtxglEd
+X0hjYlbD5VWwTSj0j8h8tgjAphUAi+pxZsRySl3FLtQtozK9wxLtfSsAkupqQl1PqQdS6o6kusJ3
+l0yXQ6LNnACkLwckb1yDqDh3YKn6dEq9zy3R45TosMX40PsbQOyiLqiHhLo/eesqIwl1z6L6V3uM
+T9Yo73q8rE8A7i0xEOVI4p+HYggATMyByxdnyKPRP6rxbVilw67wcVBOAtambRFvof4hufvzyTGa
+yBbJEskUycg1sS/HxN7sPPaI7M7KY1dmKjszUsnJL2LhTf7rGAy/AP7X5rYY5FLEAAAAAElFTkSu
+QmCC
 			</icon>
 		</appfolder>
 		<basepath>

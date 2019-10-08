@@ -28,6 +28,7 @@ namespace GitProject
     {
         static GitProjectRepository instance = new GitProjectRepository();
         GitProjectRepositoryFolders.RxMainFrameAppFolder _rxmainframe;
+        GitProjectRepositoryFolders.RxMainFrame1AppFolder _rxmainframe1;
 
         /// <summary>
         /// Gets the singleton class instance representing the GitProjectRepository element repository.
@@ -45,6 +46,7 @@ namespace GitProject
             : base("GitProjectRepository", "/", null, 0, false, "6f27a602-fa04-40a2-94a5-9857a548990a", ".\\RepositoryImages\\GitProjectRepository6f27a602.rximgres")
         {
             _rxmainframe = new GitProjectRepositoryFolders.RxMainFrameAppFolder(this);
+            _rxmainframe1 = new GitProjectRepositoryFolders.RxMainFrame1AppFolder(this);
         }
 
 #region Variables
@@ -71,6 +73,15 @@ namespace GitProject
         {
             get { return _rxmainframe; }
         }
+
+        /// <summary>
+        /// The RxMainFrame1 folder.
+        /// </summary>
+        [RepositoryFolder("6fe3dbc0-54e4-448a-8b3e-1ab8ac554c4c")]
+        public virtual GitProjectRepositoryFolders.RxMainFrame1AppFolder RxMainFrame1
+        {
+            get { return _rxmainframe1; }
+        }
     }
 
     /// <summary>
@@ -86,6 +97,7 @@ namespace GitProject
         public partial class RxMainFrameAppFolder : RepoGenBaseFolder
         {
             RepoItemInfo _rxbuttonexitInfo;
+            RepoItemInfo _resetInfo;
 
             /// <summary>
             /// Creates a new RxMainFrame  folder.
@@ -94,6 +106,7 @@ namespace GitProject
                     base("RxMainFrame", "/form[@controlname='RxMainFrame']", parentFolder, 30000, null, true, "311b047d-ef81-4614-b294-436cbe20d9bf", "")
             {
                 _rxbuttonexitInfo = new RepoItemInfo(this, "RxButtonExit", "button[@controlname='RxButtonExit']", 30000, null, "aa1418fe-615a-472c-8279-cfa9531ce095");
+                _resetInfo = new RepoItemInfo(this, "Reset", "?/?/tabpage[@controlname='RxTabIntroduction']/link[@controlname='RxLinkBtnReset']/?/?/link[@accessiblename='Reset']", 30000, null, "331dcd92-06d4-4958-8251-49fb106513b4");
             }
 
             /// <summary>
@@ -141,6 +154,96 @@ namespace GitProject
                 get
                 {
                     return _rxbuttonexitInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Reset item.
+            /// </summary>
+            [RepositoryItem("331dcd92-06d4-4958-8251-49fb106513b4")]
+            public virtual Ranorex.Link Reset
+            {
+                get
+                {
+                    return _resetInfo.CreateAdapter<Ranorex.Link>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Reset item info.
+            /// </summary>
+            [RepositoryItemInfo("331dcd92-06d4-4958-8251-49fb106513b4")]
+            public virtual RepoItemInfo ResetInfo
+            {
+                get
+                {
+                    return _resetInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The RxMainFrame1AppFolder folder.
+        /// </summary>
+        [RepositoryFolder("6fe3dbc0-54e4-448a-8b3e-1ab8ac554c4c")]
+        public partial class RxMainFrame1AppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _resetInfo;
+
+            /// <summary>
+            /// Creates a new RxMainFrame1  folder.
+            /// </summary>
+            public RxMainFrame1AppFolder(RepoGenBaseFolder parentFolder) :
+                    base("RxMainFrame1", "/form[@controltypename='RxMainFrame']", parentFolder, 30000, null, true, "6fe3dbc0-54e4-448a-8b3e-1ab8ac554c4c", "")
+            {
+                _resetInfo = new RepoItemInfo(this, "Reset", "?/?/tabpage[1]/link[@controlname='RxLinkBtnReset']/?/?/link[@accessiblename='Reset']", 30000, null, "8c7fb77e-a57f-43e2-9d7f-9676aaa72ba0");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("6fe3dbc0-54e4-448a-8b3e-1ab8ac554c4c")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("6fe3dbc0-54e4-448a-8b3e-1ab8ac554c4c")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Reset item.
+            /// </summary>
+            [RepositoryItem("8c7fb77e-a57f-43e2-9d7f-9676aaa72ba0")]
+            public virtual Ranorex.Link Reset
+            {
+                get
+                {
+                    return _resetInfo.CreateAdapter<Ranorex.Link>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Reset item info.
+            /// </summary>
+            [RepositoryItemInfo("8c7fb77e-a57f-43e2-9d7f-9676aaa72ba0")]
+            public virtual RepoItemInfo ResetInfo
+            {
+                get
+                {
+                    return _resetInfo;
                 }
             }
         }
