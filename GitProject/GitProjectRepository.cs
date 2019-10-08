@@ -27,6 +27,7 @@ namespace GitProject
     public partial class GitProjectRepository : RepoGenBaseFolder
     {
         static GitProjectRepository instance = new GitProjectRepository();
+        GitProjectRepositoryFolders.RxMainFrameAppFolder _rxmainframe;
 
         /// <summary>
         /// Gets the singleton class instance representing the GitProjectRepository element repository.
@@ -43,6 +44,7 @@ namespace GitProject
         public GitProjectRepository() 
             : base("GitProjectRepository", "/", null, 0, false, "6f27a602-fa04-40a2-94a5-9857a548990a", ".\\RepositoryImages\\GitProjectRepository6f27a602.rximgres")
         {
+            _rxmainframe = new GitProjectRepositoryFolders.RxMainFrameAppFolder(this);
         }
 
 #region Variables
@@ -60,6 +62,15 @@ namespace GitProject
                 return _selfInfo;
             }
         }
+
+        /// <summary>
+        /// The RxMainFrame folder.
+        /// </summary>
+        [RepositoryFolder("311b047d-ef81-4614-b294-436cbe20d9bf")]
+        public virtual GitProjectRepositoryFolders.RxMainFrameAppFolder RxMainFrame
+        {
+            get { return _rxmainframe; }
+        }
     }
 
     /// <summary>
@@ -68,6 +79,72 @@ namespace GitProject
     [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     public partial class GitProjectRepositoryFolders
     {
+        /// <summary>
+        /// The RxMainFrameAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("311b047d-ef81-4614-b294-436cbe20d9bf")]
+        public partial class RxMainFrameAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _rxbuttonexitInfo;
+
+            /// <summary>
+            /// Creates a new RxMainFrame  folder.
+            /// </summary>
+            public RxMainFrameAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("RxMainFrame", "/form[@controlname='RxMainFrame']", parentFolder, 30000, null, true, "311b047d-ef81-4614-b294-436cbe20d9bf", "")
+            {
+                _rxbuttonexitInfo = new RepoItemInfo(this, "RxButtonExit", "button[@controlname='RxButtonExit']", 30000, null, "aa1418fe-615a-472c-8279-cfa9531ce095");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("311b047d-ef81-4614-b294-436cbe20d9bf")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("311b047d-ef81-4614-b294-436cbe20d9bf")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RxButtonExit item.
+            /// </summary>
+            [RepositoryItem("aa1418fe-615a-472c-8279-cfa9531ce095")]
+            public virtual Ranorex.Button RxButtonExit
+            {
+                get
+                {
+                    return _rxbuttonexitInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RxButtonExit item info.
+            /// </summary>
+            [RepositoryItemInfo("aa1418fe-615a-472c-8279-cfa9531ce095")]
+            public virtual RepoItemInfo RxButtonExitInfo
+            {
+                get
+                {
+                    return _rxbuttonexitInfo;
+                }
+            }
+        }
+
     }
 #pragma warning restore 0436
 }

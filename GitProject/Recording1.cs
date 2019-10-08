@@ -79,6 +79,10 @@ namespace GitProject
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'RxMainFrame.RxButtonExit' at 28;11.", repo.RxMainFrame.RxButtonExitInfo, new RecordItemIndex(0));
+            repo.RxMainFrame.RxButtonExit.Click("28;11");
+            Delay.Milliseconds(200);
+            
         }
 
 #region Image Feature Data
