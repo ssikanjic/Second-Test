@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repository
+name="GitProjectRepository"
+id="c29667b7-1a97-43ed-b087-bad4ce3fa910">
+  <codegen
+  classname="GitProjectRepository"
+  namespace="GitProject"/>
+  <rootfolder
+  name="Root"
+  id="6f27a602-fa04-40a2-94a5-9857a548990a"
+  searchtimeout="30000ms"
+  capname="unknown"
+  isrooted="True"
+  usecache="True">
+    <basepath/>
+  </rootfolder>
+  <variables/>
+</repository>
